@@ -1,0 +1,248 @@
+:root {
+    --article-survey-white-color: #ffffff;
+    --article-survey-black-color: rgba(0, 0, 0, 0.8);
+    --article-survey-lightgray-color: rgba(0, 0, 0, 0.1);
+    --article-survey-gray-color: rgba(0, 0, 0, 0.3);
+    --article-survey-darkgray-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .wrap-survey {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    gap: 16px;
+    margin-top: 30px;
+    width: 100%;
+    position: relative;
+  }
+  
+  .article-survey {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    padding: 8px 24px;
+    border: 1px solid var(--article-survey-lightgray-color);
+    background-color: var(--article-survey-white-color);
+    border-radius: 5px;
+    text-align: center;
+    font-size: 15px;
+  }
+  
+  .article-survey > span {
+    margin-right: 20px;
+    color: var(--article-survey-darkgray-color);
+    font-weight: bold;
+  }
+  
+  .button-group {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+  }
+  
+  .button-group button {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    margin: 5px 3px;
+    padding: 5px 10px;
+    background-color: var(--article-survey-white-color);
+    border: none;
+    border-radius: 5px;
+    fill: var(--article-survey-gray-color);
+    color: var(--article-survey-darkgray-color);
+    font-weight: bold;
+    cursor: pointer;
+  
+    -webkit-transition: background-color 0.2s ease-out, color 0.2s ease-out, fill 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out, color 0.2s ease-out, fill 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out, color 0.2s ease-out, fill 0.2s ease-out;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out, fill 0.2s ease-out;
+  }
+  
+  .button-group button:hover {
+    background-color: var(--article-survey-gray-color);
+    color: var(--article-survey-white-color);
+    fill: var(--article-survey-white-color);
+  }
+  
+  .button-group button svg {
+    margin-right: 8px;
+    width: 20px;
+    height: auto;
+  }
+  
+  .article-survey-button-disabled,
+  .article-survey-button-selected {
+    color: var(--article-survey-white-color) !important;
+    fill: var(--article-survey-white-color) !important;
+    cursor: not-allowed !important;
+  }
+  .article-survey-button-disabled {
+    background-color: var(--article-survey-lightgray-color) !important;
+  }
+  .article-survey-button-selected {
+    background-color: var(--article-survey-gray-color) !important;
+  }
+  
+  /* ################## */
+  .modal-feedback {
+    z-index: 999999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--article-survey-darkgray-color);
+    /* visibility: hidden; 
+    display: none;*/
+    pointer-events: none;
+    opacity: 0;
+  
+    -webkit-transition: opacity 0.2s ease-out;
+    -moz-transition: opacity 0.2s ease-out;
+    -o-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out;
+  }
+  
+  .show-modal-feedback {
+    /* z-index: 999999; */
+    opacity: 1;
+    pointer-events: auto;
+    /* visibility: visible;
+    display: block; */
+  }
+  
+  .dialog-negative-feedback {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 24px;
+    border-radius: 8px;
+    background-color: var(--article-survey-white-color);
+    text-align: left;
+    font-size: 15px;
+    color: var(--article-survey-darkgray-color);
+  }
+  
+  .dialog-negative-feedback span {
+    display: block;
+    margin-bottom: 16px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .dialog-negative-feedback .button_send_negative_feedback {
+    margin: 4px auto;
+    padding: 8px 16px;
+    border: none;
+    background-color: var(--article-survey-darkgray-color);
+    color: var(--article-survey-white-color);
+    cursor: pointer;
+  
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out;
+  }
+  .dialog-negative-feedback .button_send_negative_feedback:hover {
+    background-color: var(--article-survey-black-color);
+  }
+  
+  .dialog-negative-feedback .button_cancel_negative_feedback {
+    margin: 4px 4px;
+    padding: 8px 16px;
+    background-color: var(--article-survey-white-color);
+    color: var(--article-survey-darkgray-color);
+    border: 1px solid var(--article-survey-lightgray-color);
+    cursor: pointer;
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out;
+  }
+  
+  .dialog-negative-feedback .button_cancel_negative_feedback:hover {
+    background-color: var(--article-survey-lightgray-color);
+  }
+  /* ################## */
+  
+  .container-reason-negative-feedback {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0;
+  }
+  
+  .container-reason-negative-feedback input[type="radio"] {
+    transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .container-reason-negative-feedback label {
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .container-negative-feedback-comment {
+    border-top: 1px solid var(--article-survey-lightgray-color);
+    margin-top: 24px;
+    padding: 16px 0px;
+    display: flex;
+    flex-flow: column;
+  }
+  .container-negative-feedback-comment textarea {
+    height: 56px;
+    padding: 4px;
+    margin: 8px 2px 0 0;
+    font-family: "Roboto", sans-serif;
+    border: 1px solid var(--article-survey-lightgray-color);
+  }
+  .container-negative-feedback-comment textarea:focus {
+    border: 1px solid var(--article-survey-lightgray-color);
+    outline: 1px solid var(--article-survey-darkgray-color);
+  }
+  
+  .container-negative-feedback-comment span {
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+    font-weight: 100;
+    color: var(--article-survey-darkgray-color);
+  }
+  
+  .feedback-finish {
+    display: none;
+    padding: 20px 32px;
+    border: 1px solid var(--article-survey-lightgray-color);
+    border-radius: 5px;
+    color: var(--article-survey-darkgray-color);
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  
+  .is-open {
+    display: block;
+  }
+  
+  .is-closed {
+    display: none;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .dialog-negative-feedback {
+      width: 90%;
+    }
+  }
