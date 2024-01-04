@@ -1,4 +1,4 @@
-const languages = ['pt', 'en', 'es'];
+const languages = ['pt', 'en', 'es', 'it'];
 
 const text_survey = {
     pt: [
@@ -34,6 +34,17 @@ const text_survey = {
         "Cancelar",
         "Gracias por su respuesta",
     ],
+    it: [
+        "L'articolo è stato utile?",
+        "Sí",
+        "No",
+        "Perché l'articolo non è stato utile?",
+        "Lascia un commento (facoltativo)",
+        "Limite 100 caratteri",
+        "Invia",
+        "Annulla",
+        "Grazie per il commento",
+    ],
 }
 
 const text_negative_feedback_options = {
@@ -57,6 +68,13 @@ const text_negative_feedback_options = {
         "Falta la información que necesito",
         "Problema de traducción",
         "Otro",
+    ],
+    it: [
+        "Difficile da capire",
+        "Informazioni non corrette",
+        "Non contiene le informazioni di cui ho bisogno",
+        "Problemi di traduzione",
+        "Altro",
     ],
 }
 
